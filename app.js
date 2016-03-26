@@ -6,6 +6,38 @@ mongoose.connect(dbURI);
 
 const medico = require('./organism/organism_medico');
 const cliente = require('./organism/organism_cliente');
+const consulta = require('./organism/organism_consulta');
+
+
+const query = {}
+const obj = medico.findOne(query,(err,data,msg)=> {
+	if(err) return console.log('Erro: ',err);
+	return console.log('Objeto: ',data);
+});
+console.log(obj);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+
 
 const endereco = {
 	rua:'Rua das margaridas'
@@ -29,4 +61,6 @@ const cli = {
 	,endereco:endereco
 }
 
-cliente.create(cli);
+
+
+**/
