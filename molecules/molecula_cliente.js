@@ -6,11 +6,10 @@ const endereco = require('./molecula_endereco');
 const contato = require('./molecula_contato');
 
 const Molecula = {
-	name: require('./../atoms/atom_nome')
-	,cgc: require('./../atoms/atom_cgc')
-	,especialidade: require('./../atoms/atom_especialidade')
-	,endereco:[endereco]
+	nome:require('./../atoms/atom_nome')
+	,cpf:require('./../atoms/atom_cpf')
 	,contato:[contato]
+	,endereco:[endereco]
 }
 
 module.exports = new Schema(Molecula);

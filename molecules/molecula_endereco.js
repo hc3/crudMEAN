@@ -11,5 +11,5 @@ const Molecule = {
 	,uf: require('./../atoms/atom_uf')
 	,numero: require('./../atoms/atom_numero')
 }
-console.log(Molecule);
+
 module.exports = new Schema(Molecule);
