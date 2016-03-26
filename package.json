@@ -1,0 +1,21 @@
+{
+  "name": "crudMEAN",
+  "version": "0.0.1",
+  "description": "Atomic Design Crud básico ",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hc3/crudMEAN.git"
+  },
+  "author": "hc3",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/hc3/crudMEAN/issues"
+  },
+  "dependencies": {
+    "mongoose": "~4.4.10"
+  }
+}
