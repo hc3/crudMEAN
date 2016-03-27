@@ -10,11 +10,9 @@ const consulta = require('./organism/organism_consulta');
 
 
 const query = {}
-const obj = medico.findOne(query,(err,data,msg)=> {
-	if(err) return console.log('Erro: ',err);
-	return console.log('Objeto: ',data);
-});
+const obj = medico.findOne();
 console.log(obj);
+
 
 
 
