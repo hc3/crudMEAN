@@ -2,7 +2,7 @@
 
 const Atom = {
 	type:String
-	,validate:require('./../hadrons/cpfValidateMongoose')
+	,validate:require('./../hadrons/cnpjValidateMongoose')
 	,required:true
 }
 
