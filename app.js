@@ -1,17 +1,41 @@
 'use strict';
 
-const mongoose = require('mongoose');
-const dbURI = 'mongodb://localhost/crudMEAN';
-mongoose.connect(dbURI);
+require('./db/config');
+const http = require('http');
 
-const medico = require('./organism/organism_medico');
+
+const pessoa = require('./organism/organism_pessoa');
 const cliente = require('./organism/organism_cliente');
-const consulta = require('./organism/organism_consulta');
+const medico = require('./organism/organism_medico');
+const consulta = require('./organism/organism_medico');
 
 
-const query = {}
-const obj = medico.findOne();
-console.log(obj);
+http.createServer((req,res) => {
+  let msg = '';
+  switch(req.url) {
+    case '/pessoa/create':
+      pessoa.create(req,res);
+      break;
+    case '/pessoa/retrieve':
+      msg = 'PESSOA CADASTRADA';
+      pessoa.retrieve(req,res);
+      break;
+    case '/pessoa/update':
+      msg = 'PESSOA CADASTRADA';
+      pessoa.update(req,res);
+      break;
+    case '/pessoa/remove':
+      msg = 'PESSOA CADASTRADA';
+      pessoa.delete(req,res);
+      break;
+    default:
+      msg = 'ROTA NÃO ENCONTRADA';
+      break;
+  }
+  res.end(msg);
+}).listen(3000,() => {
+  console.log('Servidor rodando em localhost:3000');
+});
 
 
 
